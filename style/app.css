@@ -1,0 +1,95 @@
+body{
+    font-family: serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: #ffff;
+}
+
+.btn{
+    padding: 10px 20px;
+    background: #007bff;
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.btn:hover{
+    background: #0056b3;
+}
+.check i{
+    position: absolute;
+    opacity: 0;
+    top: -0.5rem;
+    left: -3rem;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #01ad0a;
+    color: #fff;
+    font-size: 30px;
+    border: 1px solid #049117;
+}
+
+.message{
+    opacity: 0;
+    font-size: 1.5rem;
+}
+
+.row{
+    transform: translateY(-25px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide{
+    display: none;
+}
+
+.rotateIN{
+    animation: rotateIn 0.5s forwards;
+}
+
+.fadeIn{
+    animation: fadeIn 1.3s 0.5s forwards;
+}
+
+@keyframes rotateIN{
+    0%{
+        opacity: 0;
+        scale: 0.5;
+        transform: rotate(0deg);
+        filter: blur(5px);
+    }
+    50%{
+        opacity: 1;
+        scale: 1.2;
+    }
+    90%{
+        opacity: 1;
+        scale: 1;
+        transform: rotate(36deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(-60px);
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
